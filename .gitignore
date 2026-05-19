@@ -7,3 +7,4 @@
 **/downloads/*
 **/baseline_metrics.json
 .cursorignore
+.cursor/*

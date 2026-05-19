@@ -191,3 +191,27 @@ When updating documentation:
 - Include specific command examples
 - Link to relevant external documentation
 ```
+
+Instructions for the AI:
+
+I have a script at @shell/upgrades/upgrade_6_5_to_6_6.sh that needs review. It should closely follow the release notes in @shell/upgrades/VERSION\ Release\ Notes.md. I've added a lot for verification and to address issues encountered during development.
+
+Can you perform a thorough review of this upgrade script to ensure the following:
+  • There are no syntax errors.
+  • All function calls or command executions handle returned values or failures appropriately.
+  • The script reliably exits when encountering errors or unexpected conditions.
+  • It is idempotent where possible, so repeated runs don’t cause unintended effects.
+
+This script upgrades Dataverse from one version to the next and will be shared with other institutions. It needs to be production-ready, resilient in irregular environments, and safe in cases of incomplete configurations.
+
+During development, some placeholder or obsolete code may have crept in. Please distinguish these from intentional verification steps or complex logic outlined in the release notes. Avoid removing any such steps unless they are clearly redundant or broken. When in doubt, cross-reference with VERSION Release Notes.md.
+
+This upgrade script is intended to be enterprise-grade and demonstrates:
+  • Professional error handling with explicit exit behavior
+  • Production-level resilience with fallback mechanisms
+  • Safety-first design with thorough validation
+  • Compatibility across institutions and deployment environments
+  • Detailed logging and monitoring throughout the process
+  • The ability to resume from the last successful step in case of interruption
+
+Please ensure the script upholds these standards and is ready for reliable use in production Dataverse environments.
